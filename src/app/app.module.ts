@@ -27,7 +27,6 @@ import { OrderViewComponent } from './order-view/order-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -42,7 +41,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     LoginViewComponent,
     DairyProductsRequestsComponent,
     NotFoundComponent,
-    NavbarComponent,
     FooterComponent
   ],
   imports: [

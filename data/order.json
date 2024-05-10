@@ -83,48 +83,6 @@
         "imageUrl": "assets/images/organic-ghee.jpg",
         "price": 9.99
       }
-    },
-    {
-      "id": "9fb2",
-      "name": "suraj rao",
-      "email": "suraj@email",
-      "phone": 7854896589,
-      "quantity": 100,
-      "address": {
-        "street": "nagar",
-        "city": "ongole",
-        "state": "Andhra Pradesh",
-        "zipCode": "120212"
-      },
-      "product": {
-        "id": "3",
-        "name": "Organic Skim Milk",
-        "description": "Organic, fat-free milk for a healthier lifestyle",
-        "category": "Milk",
-        "imageUrl": "assets/images/skim-milk.jpg",
-        "price": 4.49
-      }
-    },
-    {
-      "id": "b626",
-      "name": "raju",
-      "email": "raju@gmail.com",
-      "phone": 8965896547,
-      "quantity": 1,
-      "address": {
-        "street": "gandhi nagar",
-        "city": "ongole",
-        "state": "AP",
-        "zipCode": "523001"
-      },
-      "product": {
-        "id": "2",
-        "name": "Low-Fat Milk",
-        "description": "Nutritious low-fat milk, perfect for everyday use",
-        "category": "Milk",
-        "imageUrl": "assets/images/low-fat-milk.jpg",
-        "price": 2.99
-      }
     }
   ]
 }
