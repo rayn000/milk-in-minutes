@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>Welcome to Milk In Minutes</h1>
+  <div class="search-filter">
+    <!-- Search -->
+    <mat-form-field appearance="fill">
+      <mat-label>Search products</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="searchText"
+      />
+    </mat-form-field>
+
+    <!-- Filter by category -->
+    <mat-form-field appearance="fill">
+      <mat-label>Filter by category</mat-label>
+      <mat-select [(ngModel)]="selectedCategory">
+        <mat-option value="">All Categories</mat-option>
+        <mat-option *ngFor="let category of categories" [value]="category">
+        {{ category }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <!-- Product cards -->
+  <div class="product-grid">
+    <mat-card class="product-card" *ngFor="let product of filteredProducts()">
+      <img class="product-img" mat-card-image [src]="product.imageUrl" alt="{{ product.name }}" />
+      <mat-card-content>
+        <h3 mat-card-title>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="navigateToOrderView(product)"
+        >
+          Order Now
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+{
+  "dairyProduct": [
+    {
+      "id": 1,
+      "name": "Whole Milk",
+      "description": "Fresh, creamy whole milk from local dairy farms",
+      "category": "Milk",
+      "imageUrl": "assets/images/whole-milk.jpg",
+      "price": 3.99
+    },
+    {
+      "id": 2,
+      "name": "Low-Fat Milk",
+      "description": "Nutritious low-fat milk, perfect for everyday use",
+      "category": "Milk",
+      "imageUrl": "assets/images/low-fat-milk.jpg",
+      "price": 2.99
+    },
+    {
+      "id": 3,
+      "name": "Organic Skim Milk",
+      "description": "Organic, fat-free milk for a healthier lifestyle",
+      "category": "Milk",
+      "imageUrl": "assets/images/skim-milk.jpg",
+      "price": 4.49
+    },
+    {
+      "id": 4,
+      "name": "Cheddar Cheese",
+      "description": "Sharp, flavorful cheddar cheese made from the finest milk",
+      "category": "Cheese",
+      "imageUrl": "assets/images/cheddar-cheese.jpg",
+      "price": 5.99
+    },
+    {
+      "id": 5,
+      "name": "Mozzarella Cheese",
+      "description": "Soft, creamy mozzarella cheese perfect for pizzas and pasta",
+      "category": "Cheese",
+      "imageUrl": "assets/images/mozzarella-cheese.jpg",
+      "price": 4.99
+    },
+    {
+      "id": 6,
+      "name": "Swiss Cheese",
+      "description": "Mild, nutty Swiss cheese with a distinctive hole pattern",
+      "category": "Cheese",
+      "imageUrl": "assets/images/swiss-cheese.jpg",
+      "price": 6.49
+    },
+    {
+      "id": 7,
+      "name": "Unsalted Butter",
+      "description": "High-quality, creamy unsalted butter for cooking and baking",
+      "category": "Butter",
+      "imageUrl": "assets/images/unsalted-butter.jpg",
+      "price": 4.79
+    },
+    {
+      "id": 8,
+      "name": "Salted Butter",
+      "description": "Rich, flavorful salted butter perfect for toast and sandwiches",
+      "category": "Butter",
+      "imageUrl": "assets/images/salted-butter.jpg",
+      "price": 4.79
+    },
+    {
+      "id": 9,
+      "name": "Organic Ghee",
+      "description": "Clarified butter with a nutty flavor, great for high-heat cooking",
+      "category": "Butter",
+      "imageUrl": "assets/images/organic-ghee.jpg",
+      "price": 9.99
+    },
+    {
+      "id": 10,
+      "name": "Plain Yogurt",
+      "description": "Creamy, tangy plain yogurt made from fresh, high-quality milk",
+      "category": "Yogurt",
+      "imageUrl": "assets/images/plain-yogurt.jpg",
+      "price": 2.99
+    },
+    {
+      "id": 11,
+      "name": "Greek Yogurt",
+      "description": "Thick, protein-rich Greek yogurt with a rich, creamy texture",
+      "category": "Yogurt",
+      "imageUrl": "assets/images/greek-yogurt.jpg",
+      "price": 3.49
+    },
+    {
+      "id": 12,
+      "name": "Vanilla Yogurt",
+      "description": "Smooth, vanilla-flavored yogurt with a touch of sweetness",
+      "category": "Yogurt",
+      "imageUrl": "assets/images/vanilla-yogurt.jpg",
+      "price": 2.99
+    },
+    {
+      "id": 13,
+      "name": "Organic Paneer",
+      "description": "Fresh, soft Indian cheese perfect for curries and other dishes",
+      "category": "Cheese",
+      "imageUrl": "assets/images/organic-paneer.jpg",
+      "price": 6.99
+    },
+    {
+      "id": 14,
+      "name": "Homemade Cottage Cheese",
+      "description": "Creamy, fresh cottage cheese made with love and care",
+      "category": "Cheese",
+      "imageUrl": "assets/images/cottage-cheese.jpg",
+      "price": 4.99
+    },
+    {
+      "id": 15,
+      "name": "Organic Kefir",
+      "description": "Probiotic-rich, tangy kefir drink for a healthy gut",
+      "category": "Yogurt",
+      "imageUrl": "assets/images/organic-kefir.jpg",
+      "price": 3.99
+    }
+  ]
+}
