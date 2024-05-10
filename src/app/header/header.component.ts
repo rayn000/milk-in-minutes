@@ -9,6 +9,8 @@ import { Router } from '@angular/router'
 export class HeaderComponent {
   constructor(private router: Router) { }
 
+  loginStatus: boolean = false;
+
   logout() {
     localStorage.removeItem('isLoggedIn');
     this.router.navigate(['/']);

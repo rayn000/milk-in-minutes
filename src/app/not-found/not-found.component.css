@@ -1,4 +1,5 @@
-div {
+.not-found-container {
+  min-height: 82.44vh;
   text-align: center;
 }
 

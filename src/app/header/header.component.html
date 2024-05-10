@@ -3,16 +3,19 @@
     <a routerLink="/" class="logo">Milk In Minutes</a>
     <nav>
       <ul>
-        <li><a routerLink="/dairy-products-requests" mat-button matTooltip="Requested Orders">
+        <li>
+          <a routerLink="/dairy-products-requests" mat-button matTooltip="Requested Orders">
           <mat-icon>shopping_cart</mat-icon>
-        </a></li>
-        <li><a routerLink="/login" mat-button>
-          Login
-        </a></li>
-        <button mat-button (click)="logout()">
-          Logout
-          <mat-icon>logout</mat-icon>
-        </button>
+          </a>
+        </li>
+        <li *ngIf="loginStatus">
+          <a routerLink="/login" mat-button>Login</a>
+        </li>
+        <li>
+          <button mat-button (click)="logout()" (click)="loginStatus = !loginStatus">
+            Logout
+          </button>
+        </li>
       </ul>
     </nav>
   </div>
