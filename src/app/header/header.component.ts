@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router'
 
 @Component({
@@ -6,13 +6,19 @@ import { Router } from '@angular/router'
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
-  constructor(private router: Router) { }
+export class HeaderComponent implements DoCheck{
 
-  loginStatus: boolean = false;
+  isLoggedIn: boolean = false;
+
+  constructor(private router: Router) { }
+  
+  ngDoCheck(): void {
+    this.isLoggedIn = !!localStorage.getItem('isLoggedIn');
+  }   
 
   logout() {
     localStorage.removeItem('isLoggedIn');
+    this.isLoggedIn = false;
     this.router.navigate(['/']);
   }
 }

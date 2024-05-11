@@ -4,18 +4,14 @@
     <nav>
       <ul>
         <li>
-          <a routerLink="/dairy-products-requests" mat-button matTooltip="Requested Orders">
-          <mat-icon>shopping_cart</mat-icon>
-          </a>
+          <a routerLink="/dairy-products-requests" mat-button>Requested Orders</a>
         </li>
-        <li *ngIf="loginStatus">
+        <li *ngIf="!isLoggedIn; else logoutButton">
           <a routerLink="/login" mat-button>Login</a>
         </li>
-        <li>
-          <button mat-button (click)="logout()" (click)="loginStatus = !loginStatus">
-            Logout
-          </button>
-        </li>
+        <ng-template #logoutButton>
+          <li><button mat-button (click)="logout()">Logout</button></li>
+        </ng-template>
       </ul>
     </nav>
   </div>
