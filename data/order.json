@@ -2,10 +2,11 @@
   "orders": [
     {
       "id": "dc9e",
-      "name": "jake",
+      "name": "Jake",
       "email": "jake@email.com",
       "phone": 7854896589,
-      "quantity": 1,
+      "quantity": 2,
+      "totalAmount": 5.98,
       "address": {
         "street": "evan street",
         "city": "balceno",
@@ -23,10 +24,11 @@
     },
     {
       "id": "efdc",
-      "name": "mike",
+      "name": "Mike",
       "email": "mike@email.com",
       "phone": 8965874589,
-      "quantity": 1,
+      "quantity": 4,
+      "totalAmount": 25.96,
       "address": {
         "street": "Hill road",
         "city": "Incalna",
@@ -47,7 +49,8 @@
       "name": "Lionas",
       "email": "lionas@kmail.to",
       "phone": 8041256004,
-      "quantity": 1,
+      "quantity": 3,
+      "totalAmount": 17.97,
       "address": {
         "street": "Toren north",
         "city": "Halbon",
@@ -69,6 +72,7 @@
       "email": "james@hotmail.com",
       "phone": 9012543008,
       "quantity": 1,
+      "totalAmount": 9.99,
       "address": {
         "street": "Grina venu",
         "city": "Campala",

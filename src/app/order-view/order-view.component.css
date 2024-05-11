@@ -1,7 +1,7 @@
 .container {
   background-color: white;
   min-height: 82.44vh;
-  max-width: 800px;
+  width: 54vw;
   margin: 20px auto;
   padding: 2rem;
 
@@ -37,14 +37,14 @@ h1 {
 
 form, .address {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
-mat-form-field {
+.form-field {
   margin-bottom: 1rem;
-  width: 20vw;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  min-width: 15.4vw;
 }
 
 h3 {
@@ -54,7 +54,7 @@ h3 {
 .actions {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   margin-right: 5.5rem;
   width: 100%;
 }

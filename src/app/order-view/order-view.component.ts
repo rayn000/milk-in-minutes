@@ -13,6 +13,9 @@ import { Order } from '../models/order';
   styleUrls: ['./order-view.component.css']
 })
 export class OrderViewComponent implements OnInit {
+
+  orderForm: any;
+
   product: DairyProduct = {
     id:  0,
     name: '',
@@ -33,6 +36,7 @@ export class OrderViewComponent implements OnInit {
 
   ngOnInit() {
     this.getProduct();
+    this.initializeForm();
   }
   
   getProduct() {
@@ -55,22 +59,40 @@ export class OrderViewComponent implements OnInit {
   }
   }
 
+  initializeForm() {
+    this.orderForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(4)]],
+      email: ['', [Validators.required, Validators.pattern(/^\S+@\S+\.\S+$/)]],
+      phone: ['', [Validators.required, Validators.pattern('^[789][0-9]{9}$')]],
+      quantity: [0, [Validators.required, Validators.min(1)]],
+      totalAmount: [this.product.price, []],
+      address: this.formBuilder.group({
+        street: ['', Validators.required],
+        city: ['', Validators.required],
+        state: ['', Validators.required],
+        zipCode: ['', [Validators.required, Validators.pattern(/^[0-9]{5,6}$/)]]
+      })
+    });
 
-  orderForm = this.formBuilder.group({
-    name: ['', [Validators.required, Validators.minLength(5)]],
-    email: ['', [Validators.required, Validators.pattern(/^\S+@\S+\.\S+$/)]],
-    phone: ['', [Validators.required, Validators.pattern('^[789][0-9]{9}$')]],
-    quantity: [1, [Validators.required, Validators.min(1)]],
-    address: this.formBuilder.group({
-      street: ['', Validators.required],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
-      zipCode: ['', [Validators.required, Validators.pattern(/^[0-9]{5,6}$/)]]
-    })
-  });
+    this.quantity?.valueChanges.subscribe(() => {
+      this.calculateTotalAmount();
+    });
+  }
 
   get name() {
     return this.orderForm.get('name');
+  }
+  get email() {
+    return this.orderForm.get('email');
+  }
+  get phone() {
+    return this.orderForm.get('phone');
+  }
+  get quantity() {
+    return this.orderForm.get('quantity');
+  }
+  get totalAmount() {
+    return this.orderForm.get('totalAmount');
   }
   get street() {
     return this.orderForm.get('street');
@@ -83,6 +105,12 @@ export class OrderViewComponent implements OnInit {
   }
   get zipCode() {
     return this.orderForm.get('zipCode');
+  }
+
+  calculateTotalAmount() {
+    const quantity = this.quantity?.value || 0;
+    const totalAmount = this.product.price * quantity;
+    this.totalAmount?.setValue(totalAmount);
   }
 
   placeOrder() {
