@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,16 +9,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-view.component.css']
 })
 export class LoginViewComponent {
-  securityCode: string = '';
+  password: string = '';
+  userName: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private _snackBar: MatSnackBar) { }
 
-  login() {
-    if (this.securityCode === 'admin123') {
+  login(loginForm: NgForm) {
+    if (this.userName === 'admin1' && this.password === 'admin123') {
       localStorage.setItem('isLoggedIn', 'true');
       this.router.navigate(['/dairy-products-requests']);
+
+      this._snackBar.open('Login Successful', 'close', {duration: 3000});
+      console.log(`name: ${this.userName} pswd: ${this.password}`);
     } else {
-      alert('Invalid security code');
+      alert('Invalid login credentials !!!');
+
+      console.log(`name: ${this.userName} pswd: ${this.password}`);
+      
     }
   }
 }
