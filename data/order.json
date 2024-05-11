@@ -83,27 +83,6 @@
         "imageUrl": "assets/images/organic-ghee.jpg",
         "price": 9.99
       }
-    },
-    {
-      "id": "c48f",
-      "name": "Kiran",
-      "email": "botkiran@email.com",
-      "phone": 7854896589,
-      "quantity": 1,
-      "address": {
-        "street": "some street",
-        "city": "some city",
-        "state": "some state",
-        "zipCode": "789451"
-      },
-      "product": {
-        "id": "3",
-        "name": "Organic Skim Milk",
-        "description": "Organic, fat-free milk for a healthier lifestyle",
-        "category": "Milk",
-        "imageUrl": "assets/images/skim-milk.jpg",
-        "price": 4.49
-      }
     }
   ]
 }

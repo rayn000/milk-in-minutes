@@ -21,7 +21,6 @@ export class OrderViewComponent implements OnInit {
     imageUrl: '',
     price: 0
   };
-  orderDate: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -34,7 +33,6 @@ export class OrderViewComponent implements OnInit {
 
   ngOnInit() {
     this.getProduct();
-    this.setOrderDate();
   }
   
   getProduct() {
@@ -59,20 +57,32 @@ export class OrderViewComponent implements OnInit {
 
 
   orderForm = this.formBuilder.group({
-    name: ['', Validators.required],
-    email: ['', Validators.email],
+    name: ['', [Validators.required, Validators.minLength(5)]],
+    email: ['', [Validators.required, Validators.pattern(/^\S+@\S+\.\S+$/)]],
     phone: ['', [Validators.required, Validators.pattern('^[789][0-9]{9}$')]],
     quantity: [1, [Validators.required, Validators.min(1)]],
     address: this.formBuilder.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zipCode: ['', Validators.required]
+      street: ['', Validators.required],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
+      zipCode: ['', [Validators.required, Validators.pattern(/^[0-9]{5,6}$/)]]
     })
   });
 
   get name() {
     return this.orderForm.get('name');
+  }
+  get street() {
+    return this.orderForm.get('street');
+  }
+  get city() {
+    return this.orderForm.get('city');
+  }
+  get state() {
+    return this.orderForm.get('state');
+  }
+  get zipCode() {
+    return this.orderForm.get('zipCode');
   }
 
   placeOrder() {
@@ -88,6 +98,7 @@ export class OrderViewComponent implements OnInit {
           { duration: 3000, panelClass: ['mat-toolbar', 'mat-primary'] }
           );
           this.orderForm.reset(this.orderForm.value);
+          this.router.navigate(['/']);
         },
         error: (error) => {
           console.error('Error ordering:', error);
@@ -106,10 +117,6 @@ export class OrderViewComponent implements OnInit {
       return confirm('You have unsaved changes. Are you sure you want to leave?');
     }
     return true;
-  }
-
-  setOrderDate() {
-    this.orderDate = new Date().toLocaleString();
   }
 
   goBack() {
