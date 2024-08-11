@@ -1,5 +1,6 @@
 .container {
-  min-height: 82.44vh;
+  min-height: 87vh;
+  max-height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,11 +40,12 @@ h3 {
 .search-filter {
   display: flex;
   justify-content: right;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .search-filter mat-form-field {
-  margin-right: 1rem;
+  margin-left: 1.4rem;
 }
 
 button {
